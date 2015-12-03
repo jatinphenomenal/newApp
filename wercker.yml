@@ -2,7 +2,7 @@
 # Docker Hub https://registry.hub.docker.com/_/debian/
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: debian
+box: exkazuu/meteor@0.0.5
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
 # services:
@@ -24,8 +24,3 @@ build:
         name: echo
         code: |
           echo "hello world!"
-         name: deploy
-           code: |
-              ./scripts/deploy --target $DEp_TAR \
-                 --run-migrations \
-                 --api-key $API_KEY \
