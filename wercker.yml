@@ -24,3 +24,8 @@ build:
         name: echo
         code: |
           echo "hello world!"
+         name: deploy
+           code: |
+              ./scripts/deploy --target $DEp_TAR \
+                 --run-migrations \
+                 --api-key $API_KEY \
