@@ -9,19 +9,4 @@ build:
 deploy:
   steps:
     - script:
-        name: install git
-        code: |
-          apt-get update
-          apt-get -y install git
-    # Add SSH-Key to
-    - leipert/add-ssh-key-gh-bb:
-        keyname: DEPLOY_SSH
-    # Add bitbucket to known hosts, so they won't ask us whether we trust bitbucket
-    - add-to-known_hosts:
-        hostname: bitbucket.org
-        fingerprint: 97:8c:1b:f2:6f:14:6b:5c:3b:ec:aa:46:46:74:7c:40
-    - leipert/git-push:
-         host: bitbucket.org
-         repo: jatindra/newone
-         branch: development
-         basedir: master
+        name: Bitbucket
