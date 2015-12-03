@@ -2,7 +2,7 @@
 # Docker Hub https://registry.hub.docker.com/_/debian/
 # Read more about containers on our dev center
 # http://devcenter.wercker.com/docs/containers/index.html
-box: debian
+box: xanderv87/meteor
 # You can also use services such as databases. Read more on our dev center:
 # http://devcenter.wercker.com/docs/services/index.html
 # services:
@@ -24,4 +24,12 @@ build:
         name: echo
         code: |
           echo "hello world!"
+deploy:
+    steps:
+        # Execute the s3sync deploy step, a step provided by wercker
+        - s3sync:
+            key_id: $AWS_ACCESS_KEY_ID
+            key_secret: $AWS_SECRET_ACCESS_KEY
+            bucket_url: $AWS_BUCKET_URL
+            source_dir: build/
 
