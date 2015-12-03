@@ -1,4 +1,4 @@
-box: debian
+box: mies/meteor
 build:
   steps:
     - script:
