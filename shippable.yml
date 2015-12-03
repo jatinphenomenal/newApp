@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 0.10.38
+services:
+  - openjdk7
+before_install:
+  - npm install -g mup
+install:
+  - curl https://install.meteor.com/ | sh
