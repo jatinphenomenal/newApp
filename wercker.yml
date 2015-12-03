@@ -10,4 +10,3 @@ deploy:
   steps:
     - script:
         name: Bitbucket
-        code: ./deploy.sh
