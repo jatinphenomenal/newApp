@@ -1,4 +1,4 @@
-box: exkazuu/meteor@0.0.5
+box: exkazuu/meteor
 build:
   steps:
     - script:
