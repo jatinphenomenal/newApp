@@ -1,4 +1,4 @@
-box: debian
+box: danieldent/meteor
 build:
   steps:
     - script:
@@ -9,4 +9,4 @@ build:
 deploy:
   steps:
     - script:
-        name: Bitbucket
+        name: Bitbucket 
