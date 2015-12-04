@@ -9,4 +9,4 @@ build:
 deploy:
   steps:
     - script:
-        name: Bitbucket 
+        name: Bitbucket
