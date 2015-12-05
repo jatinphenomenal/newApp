@@ -1,4 +1,4 @@
-box: jparyani/meteor
+box: wercker/nodejs
 build:
   steps:
     - script:
