@@ -11,6 +11,6 @@ before_install:
 - tar xvf secrets.tar # Decompress secrets.tar
 services: mongodb
 script:
-- meteor --test --settings settings.json --release velocity:METEOR@1.1.0.2_3
+- meteor --test --settings settings.json --release velocity:METEOR@1.2.1
 after_success:
 - curl -L http://git.io/vqbln | sh
