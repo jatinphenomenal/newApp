@@ -1,0 +1,60 @@
+<head>
+    <title>Welcome</title>
+</head>
+
+<body>
+    <a href="/contactus">Contact us</a>
+    <a href="/addTemplate">Add new Template</a>
+    <a href="/allData">Load all data</a>
+
+    {{> home}}
+    {{> mainTemplate}}
+</body>
+
+<template name="home">
+    <select id="drpTemplate">
+        <option value="default">Load Template</option>
+        {{#each templates}}
+            <option value="{{value}}">{{name}}</option>
+        {{/each}}
+    </select>
+</template>
+
+<template name="mainTemplate">
+    {{> UI.dynamic template=myTemplate}}
+</template>
+
+<template name="contactus">
+    <h1>Contact Us</h1>
+</template>
+
+<template name="addTemplate">
+    Name of template: <input type="text" id="txtTemplate"/><button id="btnAddTemplate">Add {{newTemplate}}</button>
+</template>
+
+<template name="allData">
+    <br>
+    <br>
+    <hr>
+        <table border="0">
+            <tr>
+                <td>Name</td>
+                <td>Details</td>
+            </tr>
+            {{#each allData}}
+                <tr>
+                   <td><span>{{name}}</span></td>
+                    <td><span><a  href="/details/{{_id}}">View</a></span></td>
+                </tr>
+            {{/each}}
+        </table>
+</template>
+
+
+
+<template name="details">
+    <br>
+    <br>
+    <hr>
+    {{name}} {{cName}}
+</template>
