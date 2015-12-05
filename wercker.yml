@@ -1,4 +1,4 @@
-box: jparyani/meteor@8.0.0
+box: jparyani/meteor
 build:
   steps:
     - script:
